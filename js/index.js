@@ -70,5 +70,27 @@ desitnationTitles.forEach(element => {
     window.addEventListener('resize', () => {
         element.style.color = '#17A2B8';
     })
+});
+
+// 8. Make all p tags change to blue on 'keydown'
+const p = document.querySelectorAll('p');
+p.forEach(element => {
+    window.addEventListener('keydown', () => {
+        element.style.color = '#17A2B8';
+    })
 })
 
+// 9. Make all p tags change to black on 'keyup'
+p.forEach(element => {
+    window.addEventListener('keyup', () => {
+        element.style.color = 'black';
+    })
+})
+
+// 10. Change all h2 tags to blue on 'contextmenu'
+const title = document.querySelectorAll('h2');
+title.forEach(element => {
+    window.addEventListener('contextmenu', () => {
+        element.style.color = '#17A2B8';
+    })
+})
