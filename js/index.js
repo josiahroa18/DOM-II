@@ -94,3 +94,20 @@ title.forEach(element => {
         element.style.color = '#17A2B8';
     })
 })
+
+// Prevent propagation
+const section = document.querySelector('.content-section');
+const text = document.querySelector('.text-content');
+section.addEventListener('click', () => {
+    text.addEventListener('click', (e) => {
+        text.style.backgroundColor = 'red';
+        e.preventPropagation();
+    })
+})
+
+// Stop navigation items from refreshing the page
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+})
