@@ -114,3 +114,8 @@ navLinks.forEach(link => {
         e.preventDefault();
     })
 })
+
+// Stretch Goal
+window.addEventListener('load', () => {
+    TweenMax.to('.home', 1.5, {scaleY: 1, opacity: 1, ease: CredentialsContainer.easeOut});
+})
