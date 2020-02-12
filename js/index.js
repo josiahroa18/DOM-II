@@ -97,12 +97,15 @@ title.forEach(element => {
 
 // Prevent propagation
 const section = document.querySelector('.content-section');
-const text = document.querySelector('.text-content');
 section.addEventListener('click', () => {
-    text.addEventListener('click', (e) => {
-        text.style.backgroundColor = 'red';
-        e.preventPropagation();
-    })
+    section.style.backgroundColor = "red";
+})
+
+const text = document.querySelector('.text-content');
+text.addEventListener('click', (e) => {
+    text.style.backgroundColor = "blue";
+    e.stopPropagation();
+
 })
 
 // Stop navigation items from refreshing the page
